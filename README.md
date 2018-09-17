@@ -6,5 +6,5 @@ Mini-applications or functions which can be helpful in everyday life
 Application which can be used to record audio. The audio can be played or stored as a wav file, and by zooming, selected audio will be played/stored.
 
 <p align="center"> 
-<img src="https://github.com/urban-eriksson/matlab-tools/blob/master/simple_recorder/soundrecorder.png">
+<img src="https://github.com/urban-eriksson/matlab-tools/blob/master/images/soundrecorder.png">
 </p>
