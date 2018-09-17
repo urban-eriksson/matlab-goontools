@@ -8,3 +8,9 @@ Application which can be used to record audio. The audio can be played or stored
 <p align="center"> 
 <img src="https://github.com/urban-eriksson/matlab-tools/blob/master/images/soundrecorder.png">
 </p>
+
+## gdensity & ldensity ##
+
+## gsmooth & lsmooth ##
+
+## ginterp & linterp ##
