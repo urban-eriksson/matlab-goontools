@@ -11,13 +11,14 @@ end
 data_sorted = sort(data);
 dens = zeros(size(bins));
 gamma2 = gamma^2;
-
-for j = 1:length(bins)
+Ndata = length(data);
+Nbins = length(bins);
+for j = 1:Nbins
     [idx_low, idx_high] = findIndexRange(bins(j) - reach, bins(j) + reach, data_sorted);
     for k = idx_low:idx_high
         dens(j) = dens(j) + 1 ./((data_sorted(k) - bins(j))^2 + 0.25 * gamma2);
     end
 end
 
-dens = 0.5 / pi * gamma * dens;
+dens = 0.5 / (pi * Ndata) * gamma * dens;
 
