@@ -1,13 +1,29 @@
-# matlab-tools
-Mini-applications or functions which can be helpful in everyday life
+# matlab-goontools
+Tools for goons. Methods and algorithms which can be useful when doing scientific programming.
 
-## simple_recorder ##
+- k-d tree
+- density
+- Gaussian and Lorentzian smoothing
+- interpolation
 
-Application which can be used to record audio. The audio can be played or stored as a wav file, and by zooming, selected audio will be played/stored.
+## k-d tree ##
+
+Lean implementation of k-d tree which can be used in a number of other algorithms, e.g. density.
+
+Run kddemo.m to see some example on how it can be used.
 
 <p align="center"> 
-<img src="https://github.com/urban-eriksson/matlab-tools/blob/master/images/soundrecorder.png">
+<img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/KDneighbors.PNG">
 </p>
+
+<p align="center"> 
+<img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/KDnearest.PNG">
+</p>
+
+<p align="center"> 
+<img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/KDrange.PNG">
+</p>
+
 
 ## gdensity & ldensity ##
 
