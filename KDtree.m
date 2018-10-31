@@ -33,7 +33,7 @@ classdef KDtree
         function indices = neighborhood_indices(obj, point, radius)
             point = obj.pre(point);
             radius2 = radius^2;
-            [~, indices] = KDtree.get_neighborhood_indices(obj.root, point, radius2, 1, obj.dimensions);
+            [~, indices] = KDtree.get_neighborhood(obj.root, point, radius2, 1, obj.dimensions);
             indices = obj.post(indices);
         end
         
