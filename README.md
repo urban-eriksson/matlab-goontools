@@ -1,5 +1,5 @@
 # matlab-goontools
-Tools for goons. Methods and algorithms which can be useful when doing scientific programming.
+Tools for goons. Methods and algorithms which are great when doing scientific programming.
 
 - k-d tree
 - density
@@ -26,6 +26,27 @@ Run kddemo.m to see some example on how it can be used.
 
 
 ## gdensity & ldensity ##
+
+The density is the workhorse of almost all data analysis, and only imagination sets a limit for the number of use casess. It works a little bit like a histogram but it brings an accuratesse the histogram simply does not have, with its compromise between resolution and partition noise.
+
+First look at the simple one dimensional density analysis:
+
+<p align="center"> 
+<img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/1Ddensity.PNG">
+</p>
+
+The density analysis can also be done for any number of dimensions. Here is an example using sample from a two dimensional Gaussian distribution.
+
+<p align="center"> 
+<img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/multivariate_gaussian.PNG">
+</p>
+
+The resulting density calculation can be seen here:
+
+<p align="center"> 
+<img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/2Ddensity.PNG">
+</p>
+
 
 ## gsmooth & lsmooth ##
 
