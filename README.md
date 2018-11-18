@@ -53,13 +53,13 @@ Run densitydemo.m to generate these samples.
 
 ## gsmooth & ginterp ##
 
-Gaussian smoothing and interpolation.
+Gaussian smoothing and Gaussian interpolation.
 
 Smoothing is a special case of interpolation where the interpolation points are the same as the coordinates for the original data. The formula for calculating Gaussian interpolation is surprisingly simple:
 
-'''
+´´´
 y = Density of x weighted by y / Density of x 
-'''
+´´´
 
 The weighted density is similar to the normal density, except that the impact on the density of each sample in x is multiplied by a weight, in this case the values of y.
 
