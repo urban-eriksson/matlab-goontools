@@ -5,7 +5,4 @@ if nargin < 4
     reach = 3 * sigma;
 end
 
-wdensy = weightedgdensity(x, y, x, sigma, reach);
-wdensx = weightedgdensity(x, ones(size(y)), x, sigma, reach);
-ysm = wdensy./wdensx;
-
+ysm = ginterp(x, y, x, sigma, reach);
