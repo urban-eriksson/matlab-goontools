@@ -2,17 +2,17 @@ function smooth_interp_demo()
 figure(3001)
 clf
 hold on
-x = [-2 -1 -.5 0 0.7 2 2];
-y = [0.6 0 0.3 -1 -0.5 0 1];
-xi = -3:0.01:3;
+x = [-2 -1 -.5 0 0.7 1 2 2];
+y = [0.6 -1 0.3 1.2 0.2 -0.5 -0.8 0.3];
+xinterp = -3:0.01:3;
 sigma = 0.5;
 reach = inf;
 ysmooth = gsmooth(x,y,sigma,reach);
-yi = ginterp(x,y,xi,sigma,reach);
+yinterp = ginterp(x,y,xinterp,sigma,reach);
 
 plot(x,y,'bo','markerfacecolor','b')
 plot(x,ysmooth,'r*','markersize',8)
-plot(xi,yi,'g','linewidth',1)
+plot(xinterp,yinterp,'g','linewidth',1)
 legend('raw data','smoothing','interpolation')
 xlabel('x')
 ylabel('y')
@@ -23,13 +23,13 @@ title('Gaussian smoothing&interpolation')
 figure(3002)
 clf
 hold on
-yi1 = ginterp(x,y,xi,0.25,inf);
-yi2 = ginterp(x,y,xi,0.5,inf);
-yi3 = ginterp(x,y,xi,1,inf);
+yi1 = ginterp(x,y,xinterp,0.25,inf);
+yi2 = ginterp(x,y,xinterp,0.5,inf);
+yi3 = ginterp(x,y,xinterp,1,inf);
 plot(x,y,'bo','markerfacecolor','b')
-plot(xi,yi1,'r')
-plot(xi,yi2,'g')
-plot(xi,yi3,'k')
+plot(xinterp,yi1,'r')
+plot(xinterp,yi2,'g')
+plot(xinterp,yi3,'k')
 legend('raw data','\sigma=0.25','\sigma=0.5','\sigma=1')
 xlabel('x')
 ylabel('y')
