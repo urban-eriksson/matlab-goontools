@@ -93,6 +93,7 @@ After performing smoothing:
 <img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/Gaussian_smooth.PNG">
 </p>
 
+These examples have been generated with smooth_interp_demo.m 
 
 
 
