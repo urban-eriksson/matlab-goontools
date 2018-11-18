@@ -12,14 +12,17 @@ Lean implementation of k-d tree which can be used in a number of other algorithm
 
 Run kddemo.m to see some example on how it can be used.
 
+### neighborhood search ###
 <p align="center"> 
 <img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/KDneighbors.PNG">
 </p>
 
+### nearest neighbor search ###
 <p align="center"> 
 <img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/KDnearest.PNG">
 </p>
 
+### range search ###
 <p align="center"> 
 <img src="https://github.com/urban-eriksson/matlab-goontools/blob/master/images/KDrange.PNG">
 </p>
