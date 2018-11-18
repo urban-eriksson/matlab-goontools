@@ -1,4 +1,4 @@
-function dens = gdensity_new(data, bins, sigma, reach)
+function dens = gdensity(data, bins, sigma, reach)
 %GDENSITY Gaussian density
 
 if nargin < 4

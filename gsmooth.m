@@ -6,6 +6,6 @@ if nargin < 4
 end
 
 wdensy = weightedgdensity(x, y, x, sigma, reach);
-wdensx = weightedgdensity(x, ones(size(x)), x, sigma, reach);
+wdensx = weightedgdensity(x, ones(size(y)), x, sigma, reach);
 ysm = wdensy./wdensx;
 

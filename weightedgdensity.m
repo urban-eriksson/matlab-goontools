@@ -1,21 +1,34 @@
 function dens = weightedgdensity(data, weights, bins, sigma, reach)
 %WEIGHTEDGDENSITY Weighted Gaussian density
+% a bin has same number of dimensions as a data
+% weights are scalar
 
 if nargin < 5
     reach = 3 * sigma;
 end
 
-[data_sorted,idx] = sort(data);
-weights_sorted = weights(idx);
-dens = zeros(size(bins));
-sigma2 = sigma^2;
-
-for j = 1:length(bins)
-    [idx_low, idx_high] = findIndexRange(bins(j) - reach, bins(j) + reach, data_sorted);
-    for k = idx_low:idx_high
-        dens(j) = dens(j) + weights_sorted(k) * exp( -0.5 * (data_sorted(k) - bins(j))^2 / sigma2 );
-    end
+if size(data,2) > size(data,1)
+    transpose = true;
+    data = data';
+    weights = weights';
+    bins = bins';
+else
+    transpose = false;
 end
 
-dens = 1/(sqrt(2*pi)*sigma) * dens;
+kd = KDtree(data);
+sigma2 = sigma^2;
+Nbins = size(bins,1);
+dens = zeros(Nbins,1);
+
+for j = 1:Nbins
+    indices = kd.neighborhood_indices(bins(j,:),reach);
+    dens(j) = sum( weights(indices) .* exp(-0.5 * sum( (data(indices,:) - bins(j,:)).^2 / sigma2, 2) ) );
+end
+
+dens = 1/(sqrt(2*pi) * sigma) * dens;
+
+if transpose
+    dens = dens';
+end
 
