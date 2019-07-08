@@ -1,4 +1,4 @@
-# matlab-goontools
+# matlab-tools
 Tools for goons. Methods and algorithms which are great when doing scientific programming.
 
 - k-d tree
